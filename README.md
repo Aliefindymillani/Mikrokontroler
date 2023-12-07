@@ -40,7 +40,30 @@ Pelatihan model dalam arsitektur SVM (Support Vector Machine) merujuk pada prose
 
 Proses pelatihan model SVM ini bertujuan untuk mencapai generalisasi yang baik, di mana model dapat mengklasifikasikan data baru dengan akurasi tinggi. Penting untuk memahami karakteristik data, memilih parameter dengan bijak, dan melakukan validasi untuk memastikan kinerja model yang baik pada data yang tidak terlihat selama pelatihan.
 
+### Evaluasi
+Proses evaluasi dilakukan untuk membandingkan kinerja implementasi jaringan SVM sebagai pengganti pengendali PID dalam sistem kontrol. Evaluasi ini akan menilai tiga indikator utama, yakni rising time, settling time, dan overshoot. Rising time mengindikasikan durasi yang dibutuhkan oleh sistem untuk mencapai 90% dari nilai setpoint setelah terjadinya perubahan input. Semakin cepat sistem mencapai nilai setpoint, semakin optimal kinerja sistemnya. Settling time merujuk pada waktu yang diperlukan oleh sistem untuk mencapai nilai yang mendekati setpoint secara stabil, biasanya dalam rentang toleransi tertentu. Semakin singkat settling time, semakin baik kinerja sistemnya. Overshoot mencerminkan kelebihan dari nilai output yang melebihi setpoint sebelum akhirnya mencapai nilai stabil. Overshoot yang tinggi menunjukkan ketidakstabilan atau respons sistem yang tidak diinginkan. Oleh karena itu, semakin rendah nilai overshoot, semakin optimal kinerja sistemnya. Dalam evaluasi ini, kinerja jaringan LSTM akan dibandingkan dengan pengendali PID tradisional dan pengendali PID yang menggunakan deep learning berdasarkan kriteria-kriteria tersebut.
 
+## Hasil Penelitian
+Dalam penelitian ini, dilakukan evaluasi kinerja antara pengendali PID tradisional, pengendali PID berbasis deep learning, dan pengendali berbasis LSTM. Tiga metrik evaluasi utama yang digunakan adalah rising time, settling time, dan overshoot.
+
+![PID_Result](https://github.com/Aliefindymillani/Mikrokontroler/assets/89888415/65e20e3a-0a3b-4397-9a3d-267dfc76e8f2)
+
+PID RESULT
+
+![SVM_Result](https://github.com/Aliefindymillani/Mikrokontroler/assets/89888415/1d1b2d0c-7ca9-4559-b181-2d6d81369c8a)
+
+SVM RESULT
+
+Grafik kinerja PID berbasis deep learning memperlihatkan perbandingan antara sistem PID tradisional dan PID SVM dalam beberapa aspek kritis. Pertama, dari segi rising time, sistem PID tradisional menunjukkan kinerja lebih cepat, dengan perbedaan waktu 15 detik lebih singkat dibandingkan dengan PID SVM. Artinya, PID tradisional lebih efisien dalam mencapai 90% dari nilai setpoint setelah terjadinya perubahan input.
+
+Namun, perbandingan pada settling time menunjukkan hasil sebaliknya. Sistem PID tradisional memerlukan waktu lebih lama 1 detik daripada PID SVM untuk mencapai nilai yang mendekati setpoint secara stabil. Ini menunjukkan bahwa, meskipun PID tradisional lebih cepat mencapai 90% setpoint, PID SVM lebih unggul dalam mencapai penyelesaian yang stabil dan mendekati setpoint dengan lebih efisien.
+
+Selanjutnya, analisis pada overshoot menunjukkan bahwa PID tradisional memiliki nilai overshoot yang lebih kecil, yaitu sebesar 0.81%, dibandingkan dengan PID SVM. Hal ini menandakan bahwa sistem kontrol PID tradisional lebih mampu menghasilkan respons yang lebih stabil dan minim overshoot jika dibandingkan dengan implementasi PID SVM.
+
+Dengan demikian, hasil grafik kinerja memberikan gambaran yang komprehensif tentang keunggulan dan kelemahan masing-masing metode pengendalian, memungkinkan pemahaman yang lebih baik tentang performa keduanya dalam konteks spesifik sistem dan tujuan kontrol yang diinginkan.
+
+## Kesimpulan
+Berdasarkan hasil evaluasi kinerja sistem kendali, dapat disimpulkan bahwa sistem kendali berbasis SVM memiliki potensi sebagai alternatif yang menarik untuk menggantikan sistem kendali PID tradisional. PID SVM menunjukkan kinerja yang lebih baik dalam hal settling time dan overshoot, menandakan bahwa sistem ini mampu mencapai nilai yang mendekati setpoint secara stabil dengan waktu yang lebih efisien serta menghasilkan respons yang lebih terkontrol dengan overshoot yang lebih kecil dibandingkan dengan PID tradisional. Meskipun demikian, perlu diperhatikan bahwa PID SVM memiliki sedikit kelemahan dalam hal rising time, yang menunjukkan waktu yang dibutuhkan oleh sistem untuk mencapai 90% dari nilai setpoint setelah terjadinya perubahan input. Meskipun demikian, kelebihan pada settling time dan overshoot dapat dianggap sebagai faktor positif yang menunjukkan bahwa pengendalian SVM memiliki performa yang sangat baik dalam mencapai stabilisasi dan respons yang diinginkan dalam suatu sistem. Oleh karena itu, implementasi sistem kendali berbasis SVM dapat menjadi pilihan yang lebih optimal tergantung pada kebutuhan spesifik dan prioritas performa kontrol yang diinginkan dalam suatu aplikasi.
 
 
 
