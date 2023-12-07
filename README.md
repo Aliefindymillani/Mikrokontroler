@@ -1,5 +1,7 @@
 # IMPLEMENTASI SVM SEBAGAI PENGGANTI PENGENDALI PID PADA KIT ITCLAB
 
+![JUDUL](https://github.com/Aliefindymillani/Mikrokontroler/assets/89888415/cd78f8b6-163b-4944-a817-e28578725250)
+
 ## Mikrokontroler
 
 Mikrokontroler adalah suatu bentuk komputer kecil yang dikemas dalam bentuk chip IC (Integrated Circuit) dan dirancang khusus untuk melaksanakan tugas atau operasi tertentu. Fungsi utamanya adalah sebagai pengontrol atau pengendali dalam suatu rangkaian elektronika. Umumnya, mikrokontroler terdiri dari beberapa komponen, termasuk CPU (Central Processing Unit), memori sebagai tempat penyimpanan data, I/O (Input dan Output), serta unit pendukung lainnya seperti yang dijelaskan oleh Dewinta (2022). Penggunaan mikrokontroler meluas dalam berbagai aplikasi elektronik seperti sistem otomotif, peralatan rumah tangga, perangkat medis, sistem keamanan, perangkat pintar, dan lainnya. Mikrokontroler menerima input dari perangkat eksternal melalui kode inputnya, kemudian mengolahnya menggunakan program yang telah dimuat ke dalam memori internal.
@@ -18,11 +20,16 @@ Deep Learning adalah metode dalam kecerdasan buatan (AI) yang terinspirasi oleh 
 ## SVM
 SVM (Support Vector Machine) adalah suatu metode atau algoritma pembelajaran mesin yang digunakan untuk klasifikasi dan regresi. SVM dapat mengatasi tugas-tugas seperti pengelompokkan data ke dalam kategori atau menentukan hubungan antara variabel. Prinsip dasar SVM adalah mencari pemisah optimal atau hyperplane yang memaksimalkan jarak antara dua kelas data yang berbeda. SVM juga dapat bekerja efektif dalam ruang fitur yang tinggi dan memberikan performa yang baik dalam menangani data yang kompleks. SVM digunakan dalam berbagai aplikasi, termasuk pengenalan pola, klasifikasi teks, pengenalan wajah, dan banyak lagi.
 
-## Metide Penelitian
+## Metode Penelitian
+
+![Metode](https://github.com/Aliefindymillani/Mikrokontroler/assets/89888415/85cc8a19-3ed3-4b36-86a6-16be76ec11f4)
+
+
 Metode penelitian adalah metode yang digunakan dalam mengumpulkan, menganalisis, dan menginterpretasi data untuk menjawab pertanyaan penelitian atau mencapai tujuan penelitian yang telah ditetapkan. Pada sub bab ini kami ingin menjelaskan metode penelitian yang digunakan dalam studi ini, yang meliputi pengumpulan data, pra proses data, pelatihan model, dan evaluasi.
 
 ### Pengumpulan Data
-Dalam penelitian ini, pengumpulan data dilakukan dengan memanfaatkan perangkat lunak emulasi TCLab. Pada tahap pengumpulan data, TCLab emulator diatur pada kecepatan 100 kali. Selama simulasi berlangsung, setpoint suhu diberikan dengan variasi yang beragam. Setpoint ini mencerminkan nilai target suhu yang diinginkan dalam pengendalian suhu. Untuk memastikan kualitas pelatihan model, variasi diberlakukan pada setpoint dalam penelitian ini. TCLab emulator dijalankan selama 540 loop. Loop atau siklus pengendalian suhu merujuk pada jumlah iterasi di mana TCLab emulator melakukan pembacaan sensor suhu dan mengatur aktuator suhu untuk mencapai setpoint yang telah ditetapkan. Pada setiap iterasi, sensor suhu membaca nilai aktual, dan aktuator disesuaikan untuk mendekati setpoint yang diinginkan. Grafik setpoint dataset yang digunakan untuk melatih model juga disajikan dalam penelitian ini.
+Dalam penelitian ini, pengumpulan data dilakukan dengan memanfaatkan perangkat lunak emulasi TCLab. Pada tahap pengumpulan data, TCLab emulator diatur pada kecepatan 100 kali. Selama simulasi berlangsung, setpoint suhu diberikan dengan variasi yang beragam. Setpoint ini mencerminkan nilai target suhu yang diinginkan dalam pengendalian suhu. Untuk memastikan kualitas pelatihan model, variasi d
+iberlakukan pada setpoint dalam penelitian ini. TCLab emulator dijalankan selama 540 loop. Loop atau siklus pengendalian suhu merujuk pada jumlah iterasi di mana TCLab emulator melakukan pembacaan sensor suhu dan mengatur aktuator suhu untuk mencapai setpoint yang telah ditetapkan. Pada setiap iterasi, sensor suhu membaca nilai aktual, dan aktuator disesuaikan untuk mendekati setpoint yang diinginkan. Grafik setpoint dataset yang digunakan untuk melatih model juga disajikan dalam penelitian ini.
 
 ![Pengumpulan Data](https://github.com/Aliefindymillani/Mikrokontroler/assets/89888415/a97dadc5-8266-42b7-9ec3-ead8c81b1d51)
 
